@@ -1,2 +1,34 @@
-# Termux-Godot-.ctex-unpacker
-Python script for unpacking .ctex game texture files godot engine
+# Godot cmd .ctex texture unpacker
+
+**Create by Aeza Lab.**
+
+A dependency-free Python tool that extracts textures from Godot engine
+`.ctex` / `.stex` containers. It scans its own folder (including
+subfolders), shows a numbered list of found files and unpacks the
+selected ones back to plain **PNG** or **WebP** images.
+
+---
+
+## English
+
+### What it does
+
+Godot does not store plain PNG files in an exported game. On import each
+texture is packed into an internal container:
+
+<div class="md-table-wrap"><div class="md-table-scroll"><table class="md-table"><thead><tr><th>Source file</th><th>Container</th><th>Internal image</th></tr></thead><tbody><tr><td>`.png` (lossless import)</td><td>`.ctex` (Godot 4) / `.stex` (Godot 3)</td><td>full PNG</td></tr><tr><td>`.png` (lossy import)</td><td>`.ctex` / `.stex`</td><td>WebP</td></tr><tr><td>`.png` (VRAM compression)</td><td>`.ctex` / `.stex`</td><td>ETC2/ASTC/S3TC — **not supported**</td></tr></tbody></table></div></div>
+This tool finds the PNG/WebP signature inside each container and writes
+it out as a normal image file. No dependencies, standard library only.
+
+### Requirements
+
+- Python **3.9 or newer**
+- Any OS: Windows, Linux, macOS, Android (Termux)
+
+### Installing Python
+
+**Windows**
+
+1. Download the installer from [python.org/downloads](https://www.python.org/downloads/).
+2. Run it and check **"Add python.exe to PATH"** on the first screen.
+3. Verify in a terminal:
