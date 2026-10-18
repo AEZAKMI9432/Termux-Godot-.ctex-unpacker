@@ -25,10 +25,9 @@ it out as a normal image file. No dependencies, standard library only.
 - Python **3.9 or newer**
 - Any OS: Windows, Linux, macOS, Android (Termux)
 
-### Installing Python
+### Installing Python and run script
 
-**Windows**
-
-1. Download the installer from [python.org/downloads](https://www.python.org/downloads/).
-2. Run it and check **"Add python.exe to PATH"** on the first screen.
-3. Verify in a terminal:
+**Termux**
+1. Enter command: pkg install python
+2. After installing Python, enter the command: python extract_ctex.py
+3. Select the desired action in the program 
